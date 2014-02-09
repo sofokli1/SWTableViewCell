@@ -603,4 +603,12 @@ static NSString * const kTableViewCellContentView = @"UITableViewCellContentView
     }
 }
 
+#pragma mark - Cleaning up
+
+- (void)dealloc
+{
+    self.cellScrollView.delegate = nil;
+    self.cellScrollView = nil;
+}
+
 @end
